@@ -1,0 +1,51 @@
+assignable  assign 分配，赋值  Offline 离线   Workshops 研讨会  Elective 选修
+
+converted 转换 notifications 通知 
+
+cluster 集群 Building Blocks 基础 Observables 值得注意的，观测
+
+patch 补丁
+
+variable 变量
+
+implement  完成 实现
+
+imperative  命令式  subscriber 订阅者
+
+execute 执行  instant 立刻的
+
+essentially  实际上 trick 技巧
+
+internal 内部 reactive 反应式的 mutate 突变，变化
+
+manipulate 控制 concept 概念 hints 提示
+
+ arbitrarily  任意的 tracking追踪 跟踪
+
+extremely  非常的 closure 闭包  omitting 忽略
+
+intercepts 拦截  access访问 reference 参考 引用
+
+convert 转换   assume 假设 猜想  associated 有关的
+
+
+
+subsequent  随后的  exposes 暴露 underlying底层的 根本的  optimize  优化
+
+detect    access 访问，到达
+
+manipulations 控制 操作  architecture  架构 boundary边界 overhead开销
+
+deduped 重复数据删除 constraining 约束  prompt 提示，迅速的
+
+ verbose 详细的，啰嗦的 convention 约定 习俗  concise 简约 
+
+invoked 调用 被启动  compose 组合，作曲
+
+corresponding  对应的    nested 嵌套，鸟窝
+
+via  通过  reusability可重用的
+
+puzzle 难题  syntax 语法 extracted 提取   functionality 功能
+
+ compilation 编译  enhancer 增强
