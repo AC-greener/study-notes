@@ -1,5 +1,7 @@
 ### Linux常用命令
 
+
+
 - ls显示目录内容， list directory contents
 
   - -a，显示隐藏文件
@@ -14,13 +16,6 @@
   - -w，统计字数(以字符串为单位)
   - -c，统计字节数bytes
 
-- ps，进程管理，查看正在运行的进程
-
-  PID：进程编号，TTY：进程所运行的位置，TIME：进程占用CPU的处理时间，CMD：进程所运行的命令
-
-  - -aux，列出所有正在运行的进程
-  - pstree，显示进程的树形结构
-  - -u username，查看指定用户进程
 
 - tar，压缩，对文件和目录进行打包
 
@@ -82,8 +77,72 @@
   - eg：mkdir dir1
   - eg：mkdir /root/dir2
   - eg：mkdir -p bin/dir3
+  
+- cd ~ 将工作目录变成主目录
 
+- cd - 将工作目录变成先前的工作目录
+  
+- whatis 显示命令的简要描述
 
+#### 重定向
+
+- grep，打印匹配的行
+
+  grep pattern file
+
+  - grep -i 忽略大小写
+
+- head/tail，打印文件的开头/结尾部分，默认10行
+
+  - head -n 5 filename 
+
+- \> 标准输出重定向
+
+  - ls -l /usr > output.txt
+
+- \>> 不覆盖文件进行重定向
+
+- 2> 错误重定向
+
+- &> 输出和错误一起重定向
+
+#### 软件包管理
+
+- rpm -qa，列出已安装的软件包
+- rpm -q package_name， 判断软件是否安装
+- yum info package_name， 显示软件信息
+
+#### 权限
+
+#### 进程
+
+- ps，进程管理，查看正在运行的进程
+
+  PID：进程编号，TTY：进程所运行的位置，TIME：进程占用CPU的处理时间，CMD：进程所运行的命令
+
+  - -aux，列出所有进程，更加详细
+  - -x，列出所有进程
+  - -u username，查看指定用户进程
+
+- top 动态查看进程
+
+- pstree，显示进程的树形结构
+
+- set，显示环境变量和shell变量
+
+- printenv，只显示环境变量
+
+#### 网络
+
+​	ssh(Secure Shell)
+
+- ping，向主机发送数据包
+- traceroute，跟踪网络数据包传输路径
+- wget，非交互式网络下载工具
+
+#### 文件搜索
+
+- locate string  寻找路径名和字符串想匹配的文件
 
 ### vim文本编辑
 
@@ -141,6 +200,7 @@
   - ：+n，下移n行
   - ：-n，上移n行
   - ：0，光标定位到第一行
+  -  http://localhost.qihoo.net:8080/DataEdit?dataframeId=5dc937e78af4e000ad1d695f 
 
 
 
