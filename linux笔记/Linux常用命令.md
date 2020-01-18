@@ -62,6 +62,15 @@
   - eg：find . -name "h*"
   - eg：find /home -size 100b
 
+- grep，print lines matching a pattern，在文件中搜索字符串匹配的行
+
+  - grep str file1
+  - grep -n str file1
+  - grep -c str file1 对匹配的行计数
+  - grep -i str file1 产生不区分大小写的匹配
+  - -l 只显示包含匹配的文件名
+  - -v列出不匹配的行
+
 - rm，删除文件
 
   - -i，交互式的删除
@@ -121,6 +130,7 @@
 - yy，复制光标所在行
 - x删除光标位置的一个字符
 - dd，删除光标所在行
+- ndd，删除多行，光标向下的n行
 - u，撤销上一次操作
 - U撤销光标所在行的所有操作
 
