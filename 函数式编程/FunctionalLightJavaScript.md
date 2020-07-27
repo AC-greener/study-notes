@@ -96,3 +96,75 @@ add(x, y) {}   add(3, 4)
 编写自己的高阶函数：当两件事情不合适的时候，可以制造一个适配器函数，
 
 **高阶函数式函数式编程的核心**
+
+适配器函数：调整参数顺序，反转参数，用数组去代替多个参数
+
+![1592968421014](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1592968421014.png)
+
+![1592968600840](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1592968600840.png)
+
+![1592968816657](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1592968816657.png)
+
+等式推理：
+
+用一个函数去定义另外一个函数
+
+```javascript
+output = console.log.bind(console)
+
+function printIf(shouldPrintIt) {
+	return function(msg) {
+		if (shouldPrintIt(msg)) {
+			output(msg);
+		}
+	};
+}
+
+function isShortEnough(str) {
+	return str.length <= 5;
+}
+function isLongEnough(str) {
+ 	return !isShortEnough(str);
+}
+function not(fn) {
+	return (...args) => !fn(...args)
+}
+var isLongEnough = not(isShortEnough)
+```
+
+```javascript
+	function when(fn) {
+		return function(predicate){
+			return function(...args){
+				if (predicate(...args)) {
+					return fn(...args);
+				}
+			};
+		};
+	}
+```
+
+```javascript
+printIf(isShortEnough)(msg)
+when(output)(isShortEnough)(msg)
+//因此
+printIf === when(output)
+```
+
+![1592984836594](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1592984836594.png)
+
+##### 2、closure
+
+
+
+![1592985469341](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1592985469341.png)
+
+当一个函数记住他周围的变量时，这个函数也可以在任何其他地方执行
+
+闭包的例子：
+
+![1592985628501](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1592985628501.png)
+
+![1592985813135](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1592985813135.png)
+
+![1592985948248](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1592985948248.png)
