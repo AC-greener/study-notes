@@ -18,6 +18,10 @@ TypeScript的主要特点如下：
 
 8）编译时检查，不污染运行时。
 
+
+
+#### 类型系统
+
 定义数组：
 
 1. ```typescript
@@ -101,3 +105,51 @@ let obj = A | B | C
 索引类型和映射类型
 
 类型推导：在没有明确指出类型的地方，TypeScript编译器会自己去推测出当前变量的类型。
+
+只读属性：可以使用readonly关键字将属性设置为只读的，只读属性必须在声明时或构造函数里进行初始化
+
+```typescript
+class Person {
+	readonly name: string
+	constructor(theName: string) {
+		this.name = theName
+	}
+}
+```
+
+
+
+##### 接口和类
+
+用接口描述函数类型：
+
+```typescript
+interface searchFn {
+	(source: string, subString: string): boolean
+}
+let mySearch: searchFn
+mySearch = function(source: string, subString: string){
+ let result = source.search(subString)
+}
+//或者 ts会进行类型推断
+mySearch = function(source, subString){
+ let result = source.search(subString)
+}
+```
+
+用接口描述索引类型：
+
+```typescript
+interface stringArray {
+	[index: number]: string
+}
+let a: stringArray
+a = ['hello', 'world']
+let s: string = a[0]
+```
+
+表示当用number去索引stringArray时会得到string类型的返回值
+
+**一个接口可以继承多个接口**
+
+#### TS的模块系统
